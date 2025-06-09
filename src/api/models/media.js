@@ -21,7 +21,7 @@ const mediaSchema = new mongoose.Schema(
       {
         person: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: 'Member',
+          ref: 'members',
           required: true
         },
         role: {

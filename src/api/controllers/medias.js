@@ -10,9 +10,11 @@ const getMedias = async (req, res) => {
     const filter = type ? { type } : {};
     const sortOrder = order === 'asc' ? 1 : -1;
 
-    const medias = await Media.find(filter).sort({
-      release_date: sortOrder
-    });
+    const medias = await Media.find(filter)
+      .sort({
+        release_date: sortOrder
+      })
+      .populate('members.person');
 
     return res.status(200).json(medias);
   } catch (error) {
@@ -25,7 +27,7 @@ const getMedias = async (req, res) => {
 const getMediaByID = async (req, res) => {
   try {
     const { id } = req.params;
-    const media = await Media.findById(id);
+    const media = await Media.findById(id).populate('members.person');
     return res.status(200).json(media);
   } catch (error) {
     return res
@@ -72,11 +74,21 @@ const postMedia = async (req, res) => {
 const putMedia = async (req, res) => {
   try {
     const { id } = req.params;
-    const newMedia = new Media(req.body);
-    newMedia._id = id;
-    const updatedMedia = await Media.findByIdAndUpdate(id, newMedia, {
+    const { title, release_date, type, seasons, length_minutes, members } =
+      req.body;
+
+    const updateFields = {
+      $set: { title, release_date, type, seasons, length_minutes }
+    };
+
+    let updatedMedia = await Media.findByIdAndUpdate(id, updateFields, {
       new: true
     });
+
+    if (Array.isArray(members)) {
+      const media = await Media.findById(id);
+    }
+
     return res.status(200).json(updatedMedia);
   } catch (error) {
     return res
