@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "mediasSeed": "node src/utils/seeds/medias.js",
+    "membersSeed": "node src/utils/seeds/members.js"
   },
   "keywords": [],
   "author": "",

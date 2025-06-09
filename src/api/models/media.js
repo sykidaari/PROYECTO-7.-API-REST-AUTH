@@ -18,7 +18,18 @@ const mediaSchema = new mongoose.Schema(
       }
     },
     members: [
-      { type: mongoose.Schema.Types.ObjectId, ref: 'members', required: false }
+      {
+        person: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Member',
+          required: true
+        },
+        role: {
+          type: String,
+          enum: ['actor', 'director', 'producer', 'writer'],
+          required: true
+        }
+      }
     ]
   },
   { timestamps: true, collection: 'medias' }
