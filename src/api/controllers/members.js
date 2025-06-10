@@ -35,7 +35,7 @@ const postMember = async (req, res) => {
   }
 };
 
-const putMember = async (req, res, next) => {
+const putMember = async (req, res) => {
   try {
     const { id } = req.params;
     const newMember = new Member(req.body);

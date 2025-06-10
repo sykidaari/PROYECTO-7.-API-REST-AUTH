@@ -87,7 +87,25 @@ const putMedia = async (req, res) => {
 
     if (Array.isArray(members)) {
       const media = await Media.findById(id);
+
+      const newMembers = members.filter((incomingMember) => {
+        return !media.members.some(
+          (existingMember) =>
+            existingMember.person.toString() === incomingMember.person &&
+            existingMember.role === incomingMember.role
+        );
+      });
+
+      if (newMembers.length > 0) {
+        updatedMedia = await Media.findByIdAndUpdate(
+          id,
+          { $push: { members: { $each: newMembers } } },
+          { new: true }
+        );
+      }
     }
+
+    updatedMedia = await Media.findById(id).populate('members.person');
 
     return res.status(200).json(updatedMedia);
   } catch (error) {
