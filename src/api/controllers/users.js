@@ -4,10 +4,7 @@ const bcrypt = require('bcrypt');
 
 const getUsers = async (req, res) => {
   try {
-    const users = await User.find().populate([
-      'favorite_medias',
-      'seen_medias'
-    ]);
+    const users = await User.find().populate('favorite_media');
     return res.status(200).json(users);
   } catch (error) {
     return res
@@ -36,6 +33,9 @@ const registerUser = async (req, res) => {
         .status(400)
         .json('Register failed, username or email already exists');
     }
+
+    const userSaved = await newUser.save();
+    return res.status(201).json(userSaved);
   } catch (error) {
     return res
       .status(400)
@@ -43,7 +43,7 @@ const registerUser = async (req, res) => {
   }
 };
 
-const loginUser = async () => {
+const loginUser = async (req, res) => {
   try {
     const { username, email_address, password } = req.body;
 
@@ -81,7 +81,7 @@ const putUser = async (req, res) => {
 
     const updatedUser = await User.findByIdAndUpdate(id, newUser, {
       new: true
-    }).populate(['favorite_medias', 'seen_medias']);
+    }).populate('favorite_media');
 
     return res.status(200).json(updatedUser);
   } catch (error) {

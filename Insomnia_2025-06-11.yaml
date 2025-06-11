@@ -1,0 +1,419 @@
+type: collection.insomnia.rest/5.0
+name: Streaming Service
+meta:
+  id: wrk_e8cd44904a584f1a96b454349d5858e9
+  created: 1749656004429
+  modified: 1749656004429
+collection:
+  - name: medias
+    meta:
+      id: fld_7695306f56ab4983b4abb13bc3aaa48b
+      created: 1749144445177
+      modified: 1749144580151
+      sortKey: -1749144445177
+    children:
+      - url: http://localhost:3000/api/v1/medias/
+        name: getMedias
+        meta:
+          id: req_b3d29ca36b394d19a0d137b849739cb0
+          created: 1749144430258
+          modified: 1749658353616
+          isPrivate: false
+          sortKey: -1749144455575
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/medias/
+        name: getMediaByID
+        meta:
+          id: req_27f72304345648b3834b0809d6f3799a
+          created: 1749144570295
+          modified: 1749656196495
+          isPrivate: false
+          sortKey: -1749144455775
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/medias/member/
+        name: getMediasByMember
+        meta:
+          id: req_b00be923af674772b8d00f58c6b15818
+          created: 1749144614077
+          modified: 1749658428390
+          isPrivate: false
+          sortKey: -1749144614077
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/
+        name: postMedia
+        meta:
+          id: req_57c56fa92f1a4c5f823368d18a90ac30
+          created: 1749144639666
+          modified: 1749656135763
+          isPrivate: false
+          sortKey: -1749144639666
+        method: POST
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/medias/
+        name: putMedia
+        meta:
+          id: req_18aaee4770d6407294809853dd32383e
+          created: 1749144667529
+          modified: 1749656171154
+          isPrivate: false
+          sortKey: -1749144639766
+        method: PUT
+        body:
+          mimeType: application/json
+          text: "\n"
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/medias/
+        name: deleteMedia
+        meta:
+          id: req_81f3722285bd4b56aa959aee2bb00650
+          created: 1749144689540
+          modified: 1749656118668
+          isPrivate: false
+          sortKey: -1749144689540
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: members
+    meta:
+      id: fld_504446bf9b574aba8aad19e3909f48d5
+      created: 1749144452301
+      modified: 1749144452301
+      sortKey: -1749144452301
+    children:
+      - url: http://localhost:3000/api/v1/members/
+        name: getMembers
+        meta:
+          id: req_5a6430acde0444d9a612eb8113c01b67
+          created: 1749480203379
+          modified: 1749658416190
+          isPrivate: false
+          sortKey: -1749480207354
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/members/
+        name: getMemberByID
+        meta:
+          id: req_3f227643e3cb433192c0ed34c32d7bd0
+          created: 1749480368476
+          modified: 1749658405466
+          isPrivate: false
+          sortKey: -1749480207454
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/members/
+        name: deleteMember
+        meta:
+          id: req_4ffe71fc890445f9956021036279021f
+          created: 1749480703477
+          modified: 1749658400095
+          isPrivate: false
+          sortKey: -1749480207554
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/members/
+        name: putMember
+        meta:
+          id: req_60111f2249df4abd885747ed6bce2b44
+          created: 1749480709149
+          modified: 1749658408256
+          isPrivate: false
+          sortKey: -1749480709149
+        method: PUT
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/members/
+        name: postMember
+        meta:
+          id: req_230ffc19a22440829437771434fa05b7
+          created: 1749480710054
+          modified: 1749658392901
+          isPrivate: false
+          sortKey: -1749480710054
+        method: POST
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: users
+    meta:
+      id: fld_d851fee7f3f646719f2226d17e3b0a2a
+      created: 1749579271135
+      modified: 1749579271135
+      sortKey: -1749579271136
+    children:
+      - url: http://localhost:3000/api/v1/users/
+        name: getUsers
+        meta:
+          id: req_6c76980b109c46f198735806b9a75230
+          created: 1749579279789
+          modified: 1749658381529
+          isPrivate: false
+          sortKey: -1749579283576
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/users/
+        name: registerUser
+        meta:
+          id: req_a2689b9328754bb5b454292f059febb7
+          created: 1749579516559
+          modified: 1749656161659
+          isPrivate: false
+          sortKey: -1749579516559
+        method: POST
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/users/login/
+        name: loginUser
+        meta:
+          id: req_da985e1dcf904bbfbc5f6b632509e518
+          created: 1749652505100
+          modified: 1749656156896
+          isPrivate: false
+          sortKey: -1749652505100
+        method: POST
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/users/
+        name: putUser
+        meta:
+          id: req_454c81b25a434d0aafceed1b7293d656
+          created: 1749652548618
+          modified: 1749658366570
+          isPrivate: false
+          sortKey: -1749652548618
+        method: PUT
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/api/v1/users/
+        name: deleteUser
+        meta:
+          id: req_a8804d4a71fa4d44947608c3ac9b2f98
+          created: 1749652576217
+          modified: 1749658372242
+          isPrivate: false
+          sortKey: -1749652576217
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.1.0
+        authentication:
+          type: bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_3164a46a29b14bada851b9afe78a7541
+    created: 1749144430211
+    modified: 1749144430211
+environments:
+  name: Base Environment
+  meta:
+    id: env_482027d9dd904308ad577c1b292f21df
+    created: 1749144430210
+    modified: 1749144430210
+    isPrivate: false

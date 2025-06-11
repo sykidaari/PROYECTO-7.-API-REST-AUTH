@@ -11,8 +11,8 @@ const usersRouter = require('express').Router();
 
 usersRouter.get('/', [isAdmin], getUsers);
 usersRouter.post('/register', registerUser);
-usersRouter.post('login', loginUser);
+usersRouter.post('/login', loginUser);
 usersRouter.put('/:id', [isAuth], putUser);
-usersRouter.delete('/id', [isAdmin], deleteUser);
+usersRouter.delete('/:id', [isAuth], deleteUser);
 
 module.exports = usersRouter;

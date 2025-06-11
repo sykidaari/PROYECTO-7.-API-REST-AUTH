@@ -1,5 +1,4 @@
 const members = [
-  // Inception
   {
     name: 'Christopher Nolan',
     nationality: 'British-American',
@@ -11,7 +10,6 @@ const members = [
     bio: 'Academy Award-winning actor best known for roles in Titanic, Inception, and The Revenant.'
   },
 
-  // The Matrix
   {
     name: 'Keanu Reeves',
     nationality: 'Canadian',
@@ -23,7 +21,6 @@ const members = [
     bio: 'Co-director of The Matrix trilogy.'
   },
 
-  // The Martian
   {
     name: 'Matt Damon',
     nationality: 'American',
@@ -35,21 +32,18 @@ const members = [
     bio: 'Legendary director known for Alien, Gladiator, and The Martian.'
   },
 
-  // Pulp Fiction
   {
     name: 'Quentin Tarantino',
     nationality: 'American',
     bio: 'Director and writer of cult classics like Pulp Fiction and Kill Bill.'
   },
 
-  // The Dark Knight
   {
     name: 'Heath Ledger',
     nationality: 'Australian',
     bio: 'Actor known for his Oscar-winning role as the Joker in The Dark Knight.'
   },
 
-  // The Godfather
   {
     name: 'Marlon Brando',
     nationality: 'American',
@@ -61,14 +55,12 @@ const members = [
     bio: 'Director of The Godfather trilogy.'
   },
 
-  // LOTR
   {
     name: 'Peter Jackson',
     nationality: 'New Zealander',
     bio: 'Director of The Lord of the Rings and The Hobbit trilogies.'
   },
 
-  // Avatar & Titanic
   {
     name: 'James Cameron',
     nationality: 'Canadian',
@@ -80,14 +72,12 @@ const members = [
     bio: 'Award-winning actress known for Titanic and The Reader.'
   },
 
-  // Interstellar
   {
     name: 'Matthew McConaughey',
     nationality: 'American',
     bio: 'Actor recognized for Interstellar, Dallas Buyers Club, and True Detective.'
   },
 
-  // Breaking Bad
   {
     name: 'Bryan Cranston',
     nationality: 'American',

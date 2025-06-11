@@ -27,7 +27,7 @@ const isAdmin = async (req, res, next) => {
 
     const user = await User.findById(id);
 
-    user.rol === 'admin'
+    user.role === 'admin'
       ? ((user.password = null), (req.user = user), next())
       : res.status(400).json('This action is exclusive to administrators');
   } catch (error) {

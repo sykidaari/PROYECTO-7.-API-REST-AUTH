@@ -12,8 +12,7 @@ const userSchema = new mongoose.Schema(
       enum: ['admin', 'user'],
       default: 'user'
     },
-    favorite_medias: { type: mongoose.Schema.Types.ObjectId, ref: 'medias' },
-    seen_medias: { type: mongoose.Schema.Types.ObjectId, ref: 'medias' }
+    favorite_media: { type: mongoose.Schema.Types.ObjectId, ref: 'medias' }
   },
   { timestamps: true, collection: 'users' }
 );
