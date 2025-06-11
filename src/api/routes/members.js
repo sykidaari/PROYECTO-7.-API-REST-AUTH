@@ -1,3 +1,4 @@
+const { isAuth, isAdmin } = require('../../middlewares/auth');
 const {
   getMembers,
   getMemberByID,
@@ -8,11 +9,11 @@ const {
 
 const membersRouter = require('express').Router();
 
-membersRouter.get('/:id', getMemberByID);
-membersRouter.get('/', getMembers);
+membersRouter.get('/:id', [isAuth], getMemberByID);
+membersRouter.get('/', [isAdmin], getMembers);
 
-membersRouter.post('/', postMember);
-membersRouter.put('/:id', putMember);
-membersRouter.delete('/:id', deleteMember);
+membersRouter.post('/', [isAdmin], postMember);
+membersRouter.put('/:id', [isAdmin], putMember);
+membersRouter.delete('/:id', [isAdmin], deleteMember);
 
 module.exports = membersRouter;
